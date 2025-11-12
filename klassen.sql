@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `regenboog_school`
+-- Database: `regenboog_schNOT NULLool`
 --
 
 -- --------------------------------------------------------
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `klassen` (
-  `id` int(11) NOT NULL,
+  `id` int(11) ,
   `naam` varchar(50) NOT NULL,
   `lokaal` varchar(10) NOT NULL,
   `juf_meester` varchar(100) NOT NULL,
