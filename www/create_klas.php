@@ -1,16 +1,21 @@
-<?php 
-
-
-$_POST
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        label{
+            width:140px;
+            display: inline-block;
+        }
+
+        .form-group{
+            margin:10px 0px;
+        }
+
+    </style>
 </head>
 <body>
     <h1>Maak klas</h1>
@@ -30,11 +35,11 @@ $_POST
         </div>
         <div class="form-group">
             <label for="aantal_l">Aantal leerlingen</label>
-            <input type="text" name="aantal_l" id="aantal_l" placeholder="20">
+            <input type="number" name="aantal_l" id="aantal_l" placeholder="20">
         </div>
         <div class="form-group">
             <label for="verdiep">Verdieping</label>
-            <input type="text" name="verdiep" id="verdiep" placeholder="2">
+            <input type="number" name="verdiep" id="verdiep" placeholder="2">
         </div>
 
         <button type="submit">Maak klas</button>
