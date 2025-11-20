@@ -1,4 +1,13 @@
-<?php include 'header.php'; ?>
+<?php 
+
+session_start();
+
+if(!empty($_SESSION['email'])){
+    include 'header.php'; 
+}
+
+
+?>
     <h1>Gebruiker maken</h1>
     <form action="register_process.php" method="post">
         <div class="form-group">
