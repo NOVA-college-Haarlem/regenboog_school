@@ -1,5 +1,14 @@
 <?php
 
+session_start();
+
+if(empty($_SESSION['email'])){
+    echo "Je bent niet correct ingelogd";
+    echo "<a href='login.php'> Login hier in </a>";
+    exit;
+}
+
+
 require 'database.php';
 
 $sql = "SELECT * FROM klassen";
@@ -7,19 +16,8 @@ $result = mysqli_query($conn, $sql);
 $klassen = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        table,tr,td{
-            border: 1px solid red;
-        }
-    </style>
-</head>
-<body>
+<?php include 'header.php'; ?>
+
     <table>
         <thead>
             <tr>

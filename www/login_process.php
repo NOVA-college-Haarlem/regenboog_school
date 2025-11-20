@@ -25,6 +25,13 @@ if(is_array($user)){ //een gebruiker is gevonden op basis van email
 
     if($password  == $user['password']){ //check wachtwoord_form met wachtwoord db
         //gebruiker is succesvol ingelogd!!!!
+
+        session_start();
+        
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['email'] = $user['email'];
+        $_SESSION['firstname'] = $user['firstname'];
+        $_SESSION['lastname'] = $user['lastname'];
         
         header("location: dashboard.php");
         exit;

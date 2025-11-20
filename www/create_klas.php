@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<?php include 'header.php'; ?>
 
-    <style>
-        label{
-            width:140px;
-            display: inline-block;
-        }
 
-        .form-group{
-            margin:10px 0px;
-        }
-
-    </style>
-</head>
-<body>
     <h1>Maak klas</h1>
     <form action="create_klas_process.php" method="post">
 

@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registreer jezelf hier</title>
-</head>
-<body>
+<?php include 'header.php'; ?>
     <h1>Gebruiker maken</h1>
     <form action="register_process.php" method="post">
         <div class="form-group">
