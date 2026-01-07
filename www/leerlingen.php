@@ -2,9 +2,11 @@
 
 require 'database.php';
 
-$sql = "SELECT * FROM leerlingen";
+$sql = "SELECT * FROM leerlingen JOIN klassen ON klassen.id = leerlingen.klas_id"; ;
 $result = mysqli_query($conn, $sql);
 $leerlingen = mysqli_fetch_all($result, MYSQLI_ASSOC);  
+
+var_dump($leerlingen);
 
 ?>
 <!DOCTYPE html>
@@ -34,7 +36,7 @@ $leerlingen = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     <td><?php echo $leerling['voornaam']; ?></td>
                     <td><?php echo $leerling['achternaam']; ?></td>
                     <td><?php echo $leerling['leerlingnummer']; ?></td>
-                    <td><?php echo $leerling['klas_id']; ?></td>
+                    <td><?php echo $leerling['naam']; ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
